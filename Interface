@@ -1,0 +1,34 @@
+using System;
+
+interface Ivehicle 
+{
+     void breaks();
+     void speed();
+}
+
+ class Car : Ivehicle 
+{
+    public void breaks() 
+    {
+        Console.WriteLine("Handle the Break.\n");
+
+    }
+    public void speed() 
+    {
+        Console.WriteLine("The speed of the car.");
+    }
+}
+class Program 
+{
+    public static void Main() 
+    {
+        Car car = new Car();
+        // Vehicle vehicle = new Vehicle();
+        car.breaks();
+        car.speed();
+    }
+}
+
+/*Handle the Break.
+
+The speed of the car.*/
