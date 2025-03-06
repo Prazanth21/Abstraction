@@ -1,0 +1,33 @@
+using System;
+
+abstract class Animal
+{
+    public abstract void Makesound();
+
+
+    public void Sleep()
+    {
+        Console.WriteLine("Sleeping");
+    }
+}
+class Dog : Animal
+{
+    public override void Makesound()
+    {
+        Console.WriteLine("Dog sound");
+    }
+
+}
+class Program 
+{
+    public static void Main() 
+    {
+        Animal animal = new Dog();
+        animal.Makesound();
+        animal.Sleep();
+    }
+}
+/*
+ Dog sound
+Sleeping
+*/
