@@ -1,0 +1,37 @@
+using System;
+
+interface Ischool 
+{
+    void study();
+}
+interface Isports 
+{
+    void play();
+}
+
+class Education : Ischool, Isports 
+{
+    public void study() 
+    {
+        Console.WriteLine("I am studying.\n");
+    }
+    public void play() 
+    {
+        Console.WriteLine("I am playing");
+    }
+}
+class Program
+{
+    public static void Main()
+    {
+        Education education = new Education();
+        Ischool school = new Education();
+        education.study();
+        education.play();
+
+    }
+}
+
+/*I am studying.
+
+I am playing*/
