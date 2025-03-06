@@ -1,0 +1,51 @@
+using System;
+
+abstract class Animal
+{
+    public abstract void Makesound();
+
+
+    public void Sleep()
+    {
+        Console.WriteLine("Sleeping");
+    }
+}
+class Dog : Animal
+{
+    public override void Makesound()
+    {
+        Console.WriteLine("Dog sound");
+    }
+
+}
+class Program 
+{
+    public static void Main() 
+    {
+        Animal animal = new Dog();
+        Console.WriteLine("The object for the \nbaseclass is create by giving child class:\n");
+        animal.Makesound();
+        animal.Sleep();
+
+        Console.WriteLine("\n");
+        
+        Dog dog = new Dog();
+        Console.WriteLine("The abstract class is\naccessed through the obj of child classs:\n  ");
+        dog.Sleep();
+        dog.Makesound();
+    }
+}
+/*
+The object for the
+baseclass is create by giving child class:
+
+Dog sound
+Sleeping
+
+
+The abstract class is
+accessed through the obj of child classs:
+
+Sleeping
+Dog sound
+*/
